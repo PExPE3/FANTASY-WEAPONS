@@ -1,4 +1,11 @@
 {
     "itemGroup.fantasy_weapons.fw_tab": "Fantasy Weapons",
-    "item.fantasy_weapons.blazing_stone": "Пылающий камень"
+    "item.fantasy_weapons.blazing_stone": "Пылающий камень",
+    "item.fantasy_weapons.weapon_fates_beacon": "Светоч Судьбы",
+    "item.fantasy_weapons.weapon_eclipse_soldier_spear": "Копьё Солдата Затмения",
+    "item.fantasy_weapons.weapon_hero_claymore": "Клеймор Героя",
+    "item.fantasy_weapons.weapon_golden_horns_battleaxe": "Боевой Топор Золотого Рога",
+    "item.fantasy_weapons.weapon_dragonslayer_halberd": "Алебарда Драконоборца",
+    "item.fantasy_weapons.weapon_thief_dagger": "Кинжал Вора",
+    "item.fantasy_weapons.weapon_wandering_wizard_sword": "Меч Странствующего Чародея"
 }

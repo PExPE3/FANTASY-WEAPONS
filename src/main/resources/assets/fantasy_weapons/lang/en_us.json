@@ -1,4 +1,11 @@
 {
     "itemGroup.fantasy_weapons.fw_tab": "Fantasy Weapons",
-    "item.fantasy_weapons.blazing_stone": "Blazing Stone"
+    "item.fantasy_weapons.blazing_stone": "Blazing Stone",
+    "item.fantasy_weapons.weapon_fates_beacon": "Fates Beacon",
+    "item.fantasy_weapons.weapon_eclipse_soldier_spear": "Eclipse Soldier Spear",
+    "item.fantasy_weapons.weapon_hero_claymore": "Hero Claymore",
+    "item.fantasy_weapons.weapon_golden_horns_battleaxe": "Golden Horns Battleaxe",
+    "item.fantasy_weapons.weapon_dragonslayer_halberd": "Dragonslayer Halberd",
+    "item.fantasy_weapons.weapon_thief_dagger": "Thief Dagger",
+    "item.fantasy_weapons.weapon_wandering_wizard_sword": "Wandering Wizard Sword"
 }

@@ -1,5 +1,6 @@
 package net.kenddie.fantasyweapons;
 
+import net.kenddie.fantasyweapons.handlers.FWEventHandler;
 import net.kenddie.fantasyweapons.item.FWCreativeModTabs;
 import net.kenddie.fantasyweapons.item.FWItems;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,6 +13,8 @@ public class FantasyWeapons {
 
     public FantasyWeapons() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        var modEventHandler = new FWEventHandler();
+        modEventBus.register(modEventHandler);
 
         FWItems.register(modEventBus);
         FWCreativeModTabs.register(modEventBus);

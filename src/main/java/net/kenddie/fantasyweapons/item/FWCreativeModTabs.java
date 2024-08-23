@@ -17,10 +17,17 @@ public class FWCreativeModTabs {
             CREATIVE_MODE_TABS.register(
                     "fw_tab",
                     () -> CreativeModeTab.builder()
-                            .icon(() -> new ItemStack(FWItems.BLAZING_STONE.get()))
+                            .icon(() -> new ItemStack(FWItems.WEAPON_ECLIPSE_SOLDIER_SPEAR.get()))
                             .title(Component.translatable("itemGroup." + FantasyWeapons.MOD_ID + ".fw_tab"))
                             .displayItems((pParameters, pOutput) -> {
                                 pOutput.accept(FWItems.BLAZING_STONE.get());
+                                pOutput.accept(FWItems.WEAPON_FATES_BEACON.get());
+                                pOutput.accept(FWItems.WEAPON_DRAGONSLAYER_HALBERD.get());
+                                pOutput.accept(FWItems.WEAPON_ECLIPSE_SOLDIER_SPEAR.get());
+                                pOutput.accept(FWItems.WEAPON_HERO_CLAYMORE.get());
+                                pOutput.accept(FWItems.WEAPON_THIEF_DAGGER.get());
+                                pOutput.accept(FWItems.WEAPON_GOLDEN_HORNS_BATTLEAXE.get());
+                                pOutput.accept(FWItems.WEAPON_WANDERING_WIZARD_SWORD.get());
                             })
                             .build()
             );

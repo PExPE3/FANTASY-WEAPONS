@@ -1,4 +1,11 @@
 {
     "itemGroup.fantasy_weapons.fw_tab": "Fantasy Weapons",
-    "item.fantasy_weapons.blazing_stone": "Палаючий камінь"
+    "item.fantasy_weapons.blazing_stone": "Палаючий камінь",
+    "item.fantasy_weapons.weapon_fates_beacon": "Світоч Долі",
+    "item.fantasy_weapons.weapon_eclipse_soldier_spear": "Спис Солдата Затемнення",
+    "item.fantasy_weapons.weapon_hero_claymore": "Клеймор Героя",
+    "item.fantasy_weapons.weapon_golden_horns_battleaxe": "Бойова сокира Золотого Рога",
+    "item.fantasy_weapons.weapon_dragonslayer_halberd": "Алебарда Драконоборця",
+    "item.fantasy_weapons.weapon_thief_dagger": "Кинджал Злодія",
+    "item.fantasy_weapons.weapon_wandering_wizard_sword": "Меч Мандрівного Чаклуна"
 }
