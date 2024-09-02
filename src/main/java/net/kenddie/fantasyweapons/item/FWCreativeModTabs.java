@@ -28,6 +28,26 @@ public class FWCreativeModTabs {
                                 pOutput.accept(FWItems.WEAPON_THIEF_DAGGER.get());
                                 pOutput.accept(FWItems.WEAPON_GOLDEN_HORNS_BATTLEAXE.get());
                                 pOutput.accept(FWItems.WEAPON_WANDERING_WIZARD_SWORD.get());
+                                pOutput.accept(FWItems.WEAPON_DARK_LORD_SWORD.get()); 
+                                pOutput.accept(FWItems.WEAPON_SUNSET_WINGS_CLAYMORE.get()); 
+                                pOutput.accept(FWItems.WEAPON_CHESS_BOARD_KNIGHT_POLEARM.get()); 
+                                pOutput.accept(FWItems.WEAPON_HEFTY_CLUB.get()); 
+                                pOutput.accept(FWItems.WEAPON_GOLDEN_HALBERD.get()); 
+                                pOutput.accept(FWItems.WEAPON_OLD_BROADSWORD.get()); 
+                                pOutput.accept(FWItems.WEAPON_OLD_DAGGER.get()); 
+                                pOutput.accept(FWItems.WEAPON_OLD_BLADE.get()); 
+                                pOutput.accept(FWItems.WEAPON_KINGSLAAYER.get()); 
+                                pOutput.accept(FWItems.WEAPON_CURSED_BLADE.get()); 
+                                pOutput.accept(FWItems.WEAPON_FURY_OF_THE_STORM.get()); 
+                                pOutput.accept(FWItems.WEAPON_DRAGONS_DOOM.get()); 
+                                pOutput.accept(FWItems.WEAPON_CRIMSON_REAPER.get()); 
+                                pOutput.accept(FWItems.WEAPON_SHARP_SWORD.get()); 
+                                pOutput.accept(FWItems.WEAPON_INFECTED_SHARP_SWORD.get()); 
+                                pOutput.accept(FWItems.WEAPON_SHARP_CURVED_SWORD.get()); 
+                                pOutput.accept(FWItems.WEAPON_INFECTED_SHARP_CURVED_SWORD.get()); 
+                                pOutput.accept(FWItems.WEAPON_SHARP_SPEAR.get()); 
+                                pOutput.accept(FWItems.WEAPON_INFECTED_SHARP_SPEAR.get());
+                                pOutput.accept(FWItems.WEAPON_BLACK_KATANA.get());
                             })
                             .build()
             );
