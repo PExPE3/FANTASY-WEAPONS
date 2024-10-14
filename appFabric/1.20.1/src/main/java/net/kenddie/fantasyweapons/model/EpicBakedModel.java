@@ -1,6 +1,7 @@
 package net.kenddie.fantasyweapons.model;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
+import net.fabricmc.fabric.impl.renderer.VanillaModelEncoder;
 import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
@@ -9,21 +10,25 @@ import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
+import java.util.function.Supplier;
 
-@SuppressWarnings("deprecation")
 public record EpicBakedModel(BakedModel smallBakedModel, BakedModel largeBakedModel) implements BakedModel {
     @Override
-    public BakedModel applyTransform(ItemDisplayContext itemDisplayContext, PoseStack poseStack, boolean applyLeftHandTransform) {
+    public void emitItemQuads(ItemStack itemStack, Supplier<RandomSource> randomSupplier, RenderContext renderContext) {
         BakedModel bakedModel;
-        if (itemDisplayContext == ItemDisplayContext.FIRST_PERSON_LEFT_HAND || itemDisplayContext == ItemDisplayContext.FIRST_PERSON_RIGHT_HAND || itemDisplayContext == ItemDisplayContext.THIRD_PERSON_LEFT_HAND || itemDisplayContext == ItemDisplayContext.THIRD_PERSON_RIGHT_HAND) {
+
+        var transformationMode = renderContext.itemTransformationMode();
+        if (transformationMode == ItemDisplayContext.FIRST_PERSON_LEFT_HAND || transformationMode == ItemDisplayContext.FIRST_PERSON_RIGHT_HAND || transformationMode == ItemDisplayContext.THIRD_PERSON_LEFT_HAND || transformationMode == ItemDisplayContext.THIRD_PERSON_RIGHT_HAND) {
             bakedModel = largeBakedModel;
         } else {
             bakedModel = smallBakedModel;
         }
-        return bakedModel.applyTransform(itemDisplayContext, poseStack, applyLeftHandTransform);
+
+        VanillaModelEncoder.emitItemQuads(bakedModel, null, randomSupplier, renderContext);
     }
 
     @Override
@@ -54,6 +59,11 @@ public record EpicBakedModel(BakedModel smallBakedModel, BakedModel largeBakedMo
     @Override
     public boolean isGui3d() {
         return largeBakedModel.isGui3d();
+    }
+
+    @Override
+    public boolean isVanillaAdapter() {
+        return false;
     }
 
     @Override
