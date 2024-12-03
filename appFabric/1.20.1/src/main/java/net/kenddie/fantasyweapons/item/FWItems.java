@@ -1,84 +1,42 @@
 package net.kenddie.fantasyweapons.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.kenddie.fantasyweapons.FantasyWeapons;
-import net.kenddie.fantasyweapons.item.weapon.lib.FWWeaponBasicItem;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
-
-import java.util.ArrayList;
-import java.util.Collection;
+import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
 
 public final class FWItems {
-    public static final Collection<Item> ITEMS = new ArrayList<>();
 
-    public static final Item BLAZING_STONE = new Item(new FabricItemSettings());
-    public static final Item WEAPON_FATES_BEACON = new FWWeaponBasicItem();
-    public static final Item WEAPON_DRAGONSLAYER_HALBERD = new FWWeaponBasicItem();
-    public static final Item WEAPON_ECLIPSE_SOLDIER_SPEAR = new FWWeaponBasicItem();
-    public static final Item WEAPON_GOLDEN_HORNS_BATTLEAXE = new FWWeaponBasicItem();
-    public static final Item WEAPON_HERO_CLAYMORE = new FWWeaponBasicItem();
-    public static final Item WEAPON_THIEF_DAGGER = new FWWeaponBasicItem();
-    public static final Item WEAPON_WANDERING_WIZARD_SWORD = new FWWeaponBasicItem();
-    public static final Item WEAPON_DARK_LORD_SWORD = new FWWeaponBasicItem();
-    public static final Item WEAPON_SUNSET_WINGS_CLAYMORE = new FWWeaponBasicItem();
-    public static final Item WEAPON_CHESS_BOARD_KNIGHT_POLEARM = new FWWeaponBasicItem();
-    public static final Item WEAPON_HEFTY_CLUB = new FWWeaponBasicItem();
-    public static final Item WEAPON_GOLDEN_HALBERD = new FWWeaponBasicItem();
-    public static final Item WEAPON_OLD_BROADSWORD = new FWWeaponBasicItem();
-    public static final Item WEAPON_OLD_DAGGER = new FWWeaponBasicItem();
-    public static final Item WEAPON_OLD_BLADE = new FWWeaponBasicItem();
-    public static final Item WEAPON_KINGSLAYER = new FWWeaponBasicItem();
-    public static final Item WEAPON_CURSED_BLADE = new FWWeaponBasicItem();
-    public static final Item WEAPON_FURY_OF_THE_STORM = new FWWeaponBasicItem();
-    public static final Item WEAPON_DRAGONS_DOOM = new FWWeaponBasicItem();
-    public static final Item WEAPON_CRIMSON_REAPER = new FWWeaponBasicItem();
-    public static final Item WEAPON_SHARP_SWORD = new FWWeaponBasicItem();
-    public static final Item WEAPON_INFECTED_SHARP_SWORD = new FWWeaponBasicItem();
-    public static final Item WEAPON_SHARP_CURVED_SWORD = new FWWeaponBasicItem();
-    public static final Item WEAPON_INFECTED_SHARP_CURVED_SWORD = new FWWeaponBasicItem();
-    public static final Item WEAPON_SHARP_SPEAR = new FWWeaponBasicItem();
-    public static final Item WEAPON_INFECTED_SHARP_SPEAR = new FWWeaponBasicItem();
-    public static final Item WEAPON_BLACK_KATANA = new FWWeaponBasicItem();
+    public static final DeclaredItem BLAZING_STONE = itemManager.declare("blazing_stone");
+    public static final DeclaredItem WEAPON_FATES_BEACON = itemManager.declareSword("weapon_fates_beacon");
+    public static final DeclaredItem WEAPON_DRAGONSLAYER_HALBERD = itemManager.declareSword("weapon_dragonslayer_halberd");
+    public static final DeclaredItem WEAPON_ECLIPSE_SOLDIER_SPEAR = itemManager.declareSword("weapon_eclipse_soldier_spear");
+    public static final DeclaredItem WEAPON_GOLDEN_HORNS_BATTLEAXE = itemManager.declareSword("weapon_golden_horns_battleaxe");
+    public static final DeclaredItem WEAPON_HERO_CLAYMORE = itemManager.declareSword("weapon_hero_claymore");
+    public static final DeclaredItem WEAPON_THIEF_DAGGER = itemManager.declareSword("weapon_thief_dagger");
+    public static final DeclaredItem WEAPON_WANDERING_WIZARD_SWORD = itemManager.declareSword("weapon_wandering_wizard_sword");
+    public static final DeclaredItem WEAPON_DARK_LORD_SWORD = itemManager.declareSword("weapon_dark_lord_sword");
+    public static final DeclaredItem WEAPON_SUNSET_WINGS_CLAYMORE = itemManager.declareSword("weapon_sunset_wings_claymore");
+    public static final DeclaredItem WEAPON_CHESS_BOARD_KNIGHT_POLEARM = itemManager.declareSword("weapon_chess_board_knight_polearm");
+    public static final DeclaredItem WEAPON_HEFTY_CLUB = itemManager.declareSword("weapon_hefty_club");
+    public static final DeclaredItem WEAPON_GOLDEN_HALBERD = itemManager.declareSword("weapon_golden_halberd");
+    public static final DeclaredItem WEAPON_OLD_BROADSWORD = itemManager.declareSword("weapon_old_broadsword");
+    public static final DeclaredItem WEAPON_OLD_DAGGER = itemManager.declareSword("weapon_old_dagger");
+    public static final DeclaredItem WEAPON_OLD_BLADE = itemManager.declareSword("weapon_old_blade");
+    public static final DeclaredItem WEAPON_KINGSLAYER = itemManager.declareSword("weapon_kingslayer");
+    public static final DeclaredItem WEAPON_CURSED_BLADE = itemManager.declareSword("weapon_cursed_blade");
+    public static final DeclaredItem WEAPON_FURY_OF_THE_STORM = itemManager.declareSword("weapon_fury_of_the_storm");
+    public static final DeclaredItem WEAPON_DRAGONS_DOOM = itemManager.declareSword("weapon_dragons_doom");
+    public static final DeclaredItem WEAPON_CRIMSON_REAPER = itemManager.declareSword("weapon_crimson_reaper");
+    public static final DeclaredItem WEAPON_SHARP_SWORD = itemManager.declareSword("weapon_sharp_sword");
+    public static final DeclaredItem WEAPON_INFECTED_SHARP_SWORD = itemManager.declareSword("weapon_infected_sharp_sword");
+    public static final DeclaredItem WEAPON_SHARP_CURVED_SWORD = itemManager.declareSword("weapon_sharp_curved_sword");
+    public static final DeclaredItem WEAPON_INFECTED_SHARP_CURVED_SWORD = itemManager.declareSword("weapon_infected_sharp_curved_sword");
+    public static final DeclaredItem WEAPON_SHARP_SPEAR = itemManager.declareSword("weapon_sharp_spear");
+    public static final DeclaredItem WEAPON_INFECTED_SHARP_SPEAR = itemManager.declareSword("weapon_infected_sharp_spear");
+    public static final DeclaredItem WEAPON_BLACK_KATANA = itemManager.declareSword("weapon_black_katana");
 
     private FWItems() {
     }
 
-    public static void register() {
-        register("blazing_stone", BLAZING_STONE);
-        register("weapon_fates_beacon", WEAPON_FATES_BEACON);
-        register("weapon_dragonslayer_halberd", WEAPON_DRAGONSLAYER_HALBERD);
-        register("weapon_eclipse_soldier_spear", WEAPON_ECLIPSE_SOLDIER_SPEAR);
-        register("weapon_golden_horns_battleaxe", WEAPON_GOLDEN_HORNS_BATTLEAXE);
-        register("weapon_hero_claymore", WEAPON_HERO_CLAYMORE);
-        register("weapon_thief_dagger", WEAPON_THIEF_DAGGER);
-        register("weapon_wandering_wizard_sword", WEAPON_WANDERING_WIZARD_SWORD);
-        register("weapon_dark_lord_sword", WEAPON_DARK_LORD_SWORD);
-        register("weapon_sunset_wings_claymore", WEAPON_SUNSET_WINGS_CLAYMORE);
-        register("weapon_chess_board_knight_polearm", WEAPON_CHESS_BOARD_KNIGHT_POLEARM);
-        register("weapon_hefty_club", WEAPON_HEFTY_CLUB);
-        register("weapon_golden_halberd", WEAPON_GOLDEN_HALBERD);
-        register("weapon_old_broadsword", WEAPON_OLD_BROADSWORD);
-        register("weapon_old_dagger", WEAPON_OLD_DAGGER);
-        register("weapon_old_blade", WEAPON_OLD_BLADE);
-        register("weapon_kingslayer", WEAPON_KINGSLAYER);
-        register("weapon_cursed_blade", WEAPON_CURSED_BLADE);
-        register("weapon_fury_of_the_storm", WEAPON_FURY_OF_THE_STORM);
-        register("weapon_dragons_doom", WEAPON_DRAGONS_DOOM);
-        register("weapon_crimson_reaper", WEAPON_CRIMSON_REAPER);
-        register("weapon_sharp_sword", WEAPON_SHARP_SWORD);
-        register("weapon_infected_sharp_sword", WEAPON_INFECTED_SHARP_SWORD);
-        register("weapon_sharp_curved_sword", WEAPON_SHARP_CURVED_SWORD);
-        register("weapon_infected_sharp_curved_sword", WEAPON_INFECTED_SHARP_CURVED_SWORD);
-        register("weapon_sharp_spear", WEAPON_SHARP_SPEAR);
-        register("weapon_infected_sharp_spear", WEAPON_INFECTED_SHARP_SPEAR);
-        register("weapon_black_katana", WEAPON_BLACK_KATANA);
-    }
-
-    private static void register(String name, Item item) {
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(FantasyWeapons.MOD_ID, name), item);
-        ITEMS.add(item);
+    public static void declare() {
+        // Dummy method to call the static initializers
     }
 }

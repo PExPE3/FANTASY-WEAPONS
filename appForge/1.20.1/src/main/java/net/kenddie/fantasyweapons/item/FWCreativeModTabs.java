@@ -36,7 +36,7 @@ public class FWCreativeModTabs {
                                 pOutput.accept(FWItems.WEAPON_OLD_BROADSWORD.get()); 
                                 pOutput.accept(FWItems.WEAPON_OLD_DAGGER.get()); 
                                 pOutput.accept(FWItems.WEAPON_OLD_BLADE.get()); 
-                                pOutput.accept(FWItems.WEAPON_KINGSLAAYER.get()); 
+                                pOutput.accept(FWItems.WEAPON_KINGSLAYER.get());
                                 pOutput.accept(FWItems.WEAPON_CURSED_BLADE.get()); 
                                 pOutput.accept(FWItems.WEAPON_FURY_OF_THE_STORM.get()); 
                                 pOutput.accept(FWItems.WEAPON_DRAGONS_DOOM.get()); 
