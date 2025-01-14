@@ -1,7 +1,7 @@
 package net.kenddie.fantasyweapons.item;
 
 import net.kenddie.fantasyweapons.FantasyWeapons;
-import net.kenddie.fantasyweapons.config.FantasyWeaponsConfig.SwordConfig;
+import net.kenddie.fantasyweapons.config.FWConfig.SwordConfig;
 import net.kenddie.fantasyweapons.item.weapon.lib.FWWeaponBasicSwordItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -12,25 +12,25 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.*;
 
-import static net.kenddie.fantasyweapons.config.FantasyWeaponsConfig.fantasyWeaponsConfig;
+import static net.kenddie.fantasyweapons.config.FWConfig.FW_CONFIG;
 
 /**
  * Manages all items in the mod.
  */
-public class ItemManager {
+public class FWItemManager {
 
     /**
      * The singleton instance of ItemManager.
      */
-    public static final ItemManager itemManager = new ItemManager();
+    public static final FWItemManager FW_ITEM_MANAGER = new FWItemManager();
     private final Set<ResourceLocation> declaredBasic = new HashSet<>();
     private final Set<ResourceLocation> declaredSwords = new HashSet<>();
     private final Map<ResourceLocation, Item> registered = new HashMap<>();
 
     /**
-     * Use {@link #itemManager} to get the singleton instance.
+     * Use {@link #FW_ITEM_MANAGER} to get the singleton instance.
      */
-    private ItemManager() {
+    private FWItemManager() {
     }
 
     /**
@@ -38,10 +38,10 @@ public class ItemManager {
      *
      * @param path The item's identifier
      */
-    public DeclaredItem declare(String path) {
+    public FWDeclaredItem declare(String path) {
         ResourceLocation id = new ResourceLocation(FantasyWeapons.MOD_ID, path);
         this.declaredBasic.add(id);
-        return new DeclaredItem(id);
+        return new FWDeclaredItem(id);
     }
 
     /**
@@ -49,10 +49,10 @@ public class ItemManager {
      *
      * @param path The item's identifier
      */
-    public DeclaredItem declareSword(String path) {
+    public FWDeclaredItem declareSword(String path) {
         ResourceLocation id = new ResourceLocation(FantasyWeapons.MOD_ID, path);
         this.declaredSwords.add(id);
-        return new DeclaredItem(id);
+        return new FWDeclaredItem(id);
     }
 
     /**
@@ -102,7 +102,7 @@ public class ItemManager {
     private void registerSwords(DeferredRegister<Item> forgeRegistry) {
         for (ResourceLocation id : declaredSwords) {
             forgeRegistry.register(id.getPath(), () -> {
-                SwordConfig config = fantasyWeaponsConfig.getSwordConfigOrDefault(id.getPath());
+                SwordConfig config = FW_CONFIG.getSwordConfigOrDefault(id.getPath());
                 FWWeaponBasicSwordItem item = new FWWeaponBasicSwordItem(Tiers.NETHERITE, config.damage, config.speed, new Item.Properties());
                 registered.put(id, item);
                 return item;

@@ -4,7 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.kenddie.fantasyweapons.item.FWCreativeModTabs;
 import net.kenddie.fantasyweapons.item.FWItems;
 
-import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
+import static net.kenddie.fantasyweapons.item.FWItemManager.FW_ITEM_MANAGER;
 
 
 public class FantasyWeapons implements ModInitializer {
@@ -13,7 +13,7 @@ public class FantasyWeapons implements ModInitializer {
     @Override
     public void onInitialize() {
         FWItems.declare();
-        itemManager.register();
+        FW_ITEM_MANAGER.register();
         FWCreativeModTabs.register();
     }
 }

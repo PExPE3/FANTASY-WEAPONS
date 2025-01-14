@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
+import static net.kenddie.fantasyweapons.item.FWItemManager.FW_ITEM_MANAGER;
 
 @Mod(FantasyWeapons.MOD_ID)
 public class FantasyWeapons {
@@ -18,7 +18,7 @@ public class FantasyWeapons {
         var modEventHandler = new FWEventHandler();
         modEventBus.register(modEventHandler);
         FWItems.declare();
-        itemManager.register(modEventBus);
+        FW_ITEM_MANAGER.register(modEventBus);
         FWCreativeModTabs.register(modEventBus);
     }
 }

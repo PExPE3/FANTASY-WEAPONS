@@ -6,19 +6,19 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
+import static net.kenddie.fantasyweapons.item.FWItemManager.FW_ITEM_MANAGER;
 
 /**
  * Configuration class for fantasy weapons.
  */
 @Configuration
-public class FantasyWeaponsConfig {
+public class FWConfig {
 
-    public static final FantasyWeaponsConfig fantasyWeaponsConfig = ConfigManager.updateAndLoadConfig(Path.of("config/fantasy_weapons.yml"), FantasyWeaponsConfig.class);
+    public static final FWConfig FW_CONFIG = FWConfigManager.updateAndLoadConfig(Path.of("config/fantasy_weapons.yml"), FWConfig.class);
 
-    public FantasyWeaponsConfig() {
+    public FWConfig() {
         this.weapons = new HashMap<>();
-        itemManager.getDeclaredSwords().forEach(id -> weapons.put(id.getPath(), SwordConfig.DEFAULT));
+        FW_ITEM_MANAGER.getDeclaredSwords().forEach(id -> weapons.put(id.getPath(), SwordConfig.DEFAULT));
     }
 
     public Map<String, SwordConfig> weapons;

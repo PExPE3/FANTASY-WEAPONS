@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.HashMap;
 import java.util.Map;
 
-import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
+import static net.kenddie.fantasyweapons.item.FWItemManager.FW_ITEM_MANAGER;
 
 public class FantasyWeaponsClient implements ClientModInitializer {
     @Override
@@ -17,7 +17,7 @@ public class FantasyWeaponsClient implements ClientModInitializer {
         ModelLoadingPlugin.register(pluginContext -> {
             Map<ResourceLocation, ResourceLocation> compliances = new HashMap<>();
 
-            for (var item : itemManager.getRegisteredItems()) {
+            for (var item : FW_ITEM_MANAGER.getRegisteredItems()) {
                 var itemName = item.getDescriptionId().substring(("item." + FantasyWeapons.MOD_ID + ".").length());
                 var largeJsonPath = String.format(("/assets/" + FantasyWeapons.MOD_ID + "/models/item/%s_large.json"), itemName);
 

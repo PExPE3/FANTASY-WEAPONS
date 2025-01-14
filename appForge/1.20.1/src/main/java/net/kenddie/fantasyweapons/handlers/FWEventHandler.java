@@ -12,7 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.HashMap;
 import java.util.Map;
 
-import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
+import static net.kenddie.fantasyweapons.item.FWItemManager.FW_ITEM_MANAGER;
 
 public class FWEventHandler {
     private static final Map<ModelResourceLocation, ModelResourceLocation> COMPLIANCES = new HashMap<>();
@@ -21,7 +21,7 @@ public class FWEventHandler {
     @OnlyIn(Dist.CLIENT)
     @SuppressWarnings("MethodMayBeStatic")
     public void onRegisterAdditional(ModelEvent.RegisterAdditional event) {
-        for (var item : itemManager.getRegisteredItems()) {
+        for (var item : FW_ITEM_MANAGER.getRegisteredItems()) {
             var itemName = item.getDescriptionId().substring("item.fantasy_weapons.".length());
             var largeJsonPath = String.format("/assets/fantasy_weapons/models/item/%s_large.json", itemName);
 
