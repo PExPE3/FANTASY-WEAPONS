@@ -4,6 +4,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version 'latest.release'
     id 'org.parchmentmc.librarian.forgegradle' version 'latest.release'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 version = mod_version
@@ -145,6 +146,8 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    shadow "de.exlll:configlib-yaml:4.5.0" // To include in the shadow jar
+    minecraftLibrary("de.exlll:configlib-yaml:4.5.0") // To include in the runtime classpath
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -153,11 +156,11 @@ dependencies {
 // See https://docs.gradle.org/current/dsl/org.gradle.language.jvm.tasks.ProcessResources.html
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [
-            minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
-            forge_version: forge_version, forge_version_range: forge_version_range,
+            minecraft_version   : minecraft_version, minecraft_version_range: minecraft_version_range,
+            forge_version       : forge_version, forge_version_range: forge_version_range,
             loader_version_range: loader_version_range,
-            mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
-            mod_authors: mod_authors, mod_description: mod_description,
+            mod_id              : mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
+            mod_authors         : mod_authors, mod_description: mod_description,
     ]
     inputs.properties replaceProperties
 
@@ -205,4 +208,15 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+tasks.register("shadowReobfJar", com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
+    dependsOn "reobfJar"
+    group = "shadow"
+    configurations = [project.configurations.shadow]
+    archiveAppendix = "remapped-shadow"
+    mergeServiceFiles()
+    from(files("build/reobfJar/output.jar"))
+    relocate("de.exlll", "net.kenddie.exlll")
+    relocate("org.snakeyaml", "net.kenddie.snakeyaml");
 }

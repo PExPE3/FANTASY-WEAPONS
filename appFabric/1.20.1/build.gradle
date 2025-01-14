@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.8-SNAPSHOT'
 	id 'maven-publish'
+	id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 version = project.mod_version
@@ -30,7 +31,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+	shadow "de.exlll:configlib-yaml:4.5.0" // To include in the shadow jar
+	implementation "de.exlll:configlib-yaml:4.5.0" // To include in the runtime classpath
 }
 
 processResources {
@@ -77,4 +79,15 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+tasks.register("shadowRemapJar", com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
+	dependsOn "remapJar"
+	group = "shadow"
+	configurations = [project.configurations.shadow]
+	archiveAppendix = "remapped-shadow"
+	mergeServiceFiles()
+	from(tasks.remapJar)
+	relocate("de.exlll", "net.kenddie.exlll")
+	relocate("org.snakeyaml", "net.kenddie.snakeyaml");
 }

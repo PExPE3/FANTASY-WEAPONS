@@ -1,7 +1,6 @@
 package net.kenddie.fantasyweapons.handlers;
 
 import net.kenddie.fantasyweapons.FantasyWeapons;
-import net.kenddie.fantasyweapons.item.FWItems;
 import net.kenddie.fantasyweapons.model.EpicBakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +12,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.HashMap;
 import java.util.Map;
 
+import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
+
 public class FWEventHandler {
     private static final Map<ModelResourceLocation, ModelResourceLocation> COMPLIANCES = new HashMap<>();
 
@@ -20,8 +21,8 @@ public class FWEventHandler {
     @OnlyIn(Dist.CLIENT)
     @SuppressWarnings("MethodMayBeStatic")
     public void onRegisterAdditional(ModelEvent.RegisterAdditional event) {
-        for (var registryObject : FWItems.ITEMS.getEntries()) {
-            var itemName = registryObject.get().getDescriptionId().substring("item.fantasy_weapons.".length());
+        for (var item : itemManager.getRegisteredItems()) {
+            var itemName = item.getDescriptionId().substring("item.fantasy_weapons.".length());
             var largeJsonPath = String.format("/assets/fantasy_weapons/models/item/%s_large.json", itemName);
 
             try (var inputStream = FantasyWeapons.class.getResourceAsStream(largeJsonPath)) {

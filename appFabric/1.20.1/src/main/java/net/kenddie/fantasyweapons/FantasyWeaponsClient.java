@@ -1,7 +1,7 @@
 package net.kenddie.fantasyweapons;
+
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin;
-import net.kenddie.fantasyweapons.item.FWItems;
 import net.kenddie.fantasyweapons.model.EpicBakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
@@ -9,13 +9,15 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.HashMap;
 import java.util.Map;
 
+import static net.kenddie.fantasyweapons.item.ItemManager.itemManager;
+
 public class FantasyWeaponsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModelLoadingPlugin.register(pluginContext -> {
             Map<ResourceLocation, ResourceLocation> compliances = new HashMap<>();
 
-            for (var item : FWItems.ITEMS) {
+            for (var item : itemManager.getRegisteredItems()) {
                 var itemName = item.getDescriptionId().substring(("item." + FantasyWeapons.MOD_ID + ".").length());
                 var largeJsonPath = String.format(("/assets/" + FantasyWeapons.MOD_ID + "/models/item/%s_large.json"), itemName);
 
