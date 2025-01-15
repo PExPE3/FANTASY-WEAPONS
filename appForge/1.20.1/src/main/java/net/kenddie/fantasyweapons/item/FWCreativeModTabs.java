@@ -48,6 +48,25 @@ public class FWCreativeModTabs {
                                 pOutput.accept(FWItems.WEAPON_SHARP_SPEAR.get()); 
                                 pOutput.accept(FWItems.WEAPON_INFECTED_SHARP_SPEAR.get());
                                 pOutput.accept(FWItems.WEAPON_BLACK_KATANA.get());
+                                pOutput.accept(FWItems.WEAPON_RIVERS_OF_BLOOD.get());
+                                pOutput.accept(FWItems.WEAPON_WAKIZASHI.get());
+                                pOutput.accept(FWItems.WEAPON_MARAI_EXECUTIONER_SWORD.get());
+                                pOutput.accept(FWItems.WEAPON_NAGAKIBA.get());
+                                pOutput.accept(FWItems.WEAPON_HAND_OF_MALENIA.get());
+                                pOutput.accept(FWItems.WEAPON_SPIDER_FANG.get());
+                                pOutput.accept(FWItems.WEAPON_VOLCANO_FLAME.get());
+                                pOutput.accept(FWItems.WEAPON_SAVAGE_SPEAR.get());
+                                pOutput.accept(FWItems.WEAPON_SAVAGE_DAGGER.get());
+                                pOutput.accept(FWItems.WEAPON_SAVAGE_SWORD.get());
+                                pOutput.accept(FWItems.WEAPON_SAVAGE_HAMMER.get());
+                                pOutput.accept(FWItems.WEAPON_FOG_GUARD_SWORD.get());
+                                pOutput.accept(FWItems.WEAPON_DARK_COVER_SWORD.get());
+                                pOutput.accept(FWItems.WEAPON_GOLDEN_EXECUTION_BATTLEAXE.get());
+                                pOutput.accept(FWItems.WEAPON_FORGOTTEN_TRACE_SPEAR.get());
+                                pOutput.accept(FWItems.WEAPON_SPARK_OF_DAWN_POLEARM.get());
+                                pOutput.accept(FWItems.WEAPON_MARIKA_HAMMER.get());
+                                pOutput.accept(FWItems.WEAPON_DESERT_WIND.get());
+                                pOutput.accept(FWItems.WEAPON_PHANTOM_NEEDLE.get());
                             })
                             .build()
             );

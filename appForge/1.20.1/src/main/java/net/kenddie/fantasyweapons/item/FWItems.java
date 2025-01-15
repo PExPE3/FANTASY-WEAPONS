@@ -32,6 +32,25 @@ public final class FWItems {
     public static final FWDeclaredItem WEAPON_SHARP_SPEAR = FW_ITEM_MANAGER.declareSword("weapon_sharp_spear");
     public static final FWDeclaredItem WEAPON_INFECTED_SHARP_SPEAR = FW_ITEM_MANAGER.declareSword("weapon_infected_sharp_spear");
     public static final FWDeclaredItem WEAPON_BLACK_KATANA = FW_ITEM_MANAGER.declareSword("weapon_black_katana");
+    public static final FWDeclaredItem WEAPON_RIVERS_OF_BLOOD = FW_ITEM_MANAGER.declareSword("weapon_rivers_of_blood");
+    public static final FWDeclaredItem WEAPON_WAKIZASHI = FW_ITEM_MANAGER.declareSword("weapon_wakizashi");
+    public static final FWDeclaredItem WEAPON_MARAI_EXECUTIONER_SWORD = FW_ITEM_MANAGER.declareSword("weapon_marai_executioner_sword");
+    public static final FWDeclaredItem WEAPON_NAGAKIBA = FW_ITEM_MANAGER.declareSword("weapon_nagakiba");
+    public static final FWDeclaredItem WEAPON_HAND_OF_MALENIA = FW_ITEM_MANAGER.declareSword("weapon_hand_of_malenia");
+    public static final FWDeclaredItem WEAPON_SPIDER_FANG = FW_ITEM_MANAGER.declareSword("weapon_spider_fang");
+    public static final FWDeclaredItem WEAPON_VOLCANO_FLAME = FW_ITEM_MANAGER.declareSword("weapon_volcano_flame");
+    public static final FWDeclaredItem WEAPON_SAVAGE_SPEAR = FW_ITEM_MANAGER.declareSword("weapon_savage_spear");
+    public static final FWDeclaredItem WEAPON_SAVAGE_DAGGER = FW_ITEM_MANAGER.declareSword("weapon_savage_dagger");
+    public static final FWDeclaredItem WEAPON_SAVAGE_SWORD = FW_ITEM_MANAGER.declareSword("weapon_savage_sword");
+    public static final FWDeclaredItem WEAPON_SAVAGE_HAMMER = FW_ITEM_MANAGER.declareSword("weapon_savage_hammer");
+    public static final FWDeclaredItem WEAPON_FOG_GUARD_SWORD = FW_ITEM_MANAGER.declareSword("weapon_fog_guard_sword");
+    public static final FWDeclaredItem WEAPON_DARK_COVER_SWORD = FW_ITEM_MANAGER.declareSword("weapon_dark_cover_sword");
+    public static final FWDeclaredItem WEAPON_GOLDEN_EXECUTION_BATTLEAXE = FW_ITEM_MANAGER.declareSword("weapon_golden_execution_battleaxe");
+    public static final FWDeclaredItem WEAPON_FORGOTTEN_TRACE_SPEAR = FW_ITEM_MANAGER.declareSword("weapon_forgotten_trace_spear");
+    public static final FWDeclaredItem WEAPON_SPARK_OF_DAWN_POLEARM = FW_ITEM_MANAGER.declareSword("weapon_spark_of_dawn_polearm");
+    public static final FWDeclaredItem WEAPON_MARIKA_HAMMER = FW_ITEM_MANAGER.declareSword("weapon_marika_hammer");
+    public static final FWDeclaredItem WEAPON_DESERT_WIND = FW_ITEM_MANAGER.declareSword("weapon_desert_wind");
+    public static final FWDeclaredItem WEAPON_PHANTOM_NEEDLE = FW_ITEM_MANAGER.declareSword("weapon_phantom_needle");
 
     private FWItems() {
     }
