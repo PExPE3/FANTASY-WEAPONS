@@ -51,6 +51,22 @@ public final class FWItems {
     public static final FWDeclaredItem WEAPON_MARIKA_HAMMER = FW_ITEM_MANAGER.declareSword("weapon_marika_hammer");
     public static final FWDeclaredItem WEAPON_DESERT_WIND = FW_ITEM_MANAGER.declareSword("weapon_desert_wind");
     public static final FWDeclaredItem WEAPON_PHANTOM_NEEDLE = FW_ITEM_MANAGER.declareSword("weapon_phantom_needle");
+    public static final FWDeclaredItem WEAPON_ESTOC = FW_ITEM_MANAGER.declareSword("weapon_estoc");
+    public static final FWDeclaredItem WEAPON_FOG_GUARD_DAGGER = FW_ITEM_MANAGER.declareSword("weapon_fog_guard_dagger");
+    public static final FWDeclaredItem WEAPON_GREAT_KATANA = FW_ITEM_MANAGER.declareSword("weapon_great_katana");
+    public static final FWDeclaredItem WEAPON_SOLDIER_GREATSPEAR = FW_ITEM_MANAGER.declareSword("weapon_soldier_greatspear");
+    public static final FWDeclaredItem WEAPON_MISERICORDE = FW_ITEM_MANAGER.declareSword("weapon_misericorde");
+    public static final FWDeclaredItem WEAPON_KNIGHT_GREATSWORD = FW_ITEM_MANAGER.declareSword("weapon_knight_greatsword");
+    public static final FWDeclaredItem WEAPON_BANISHED_KNIGHT_GREATSWORD = FW_ITEM_MANAGER.declareSword("weapon_banished_knight_greatsword");
+    public static final FWDeclaredItem WEAPON_DARK_MOON_GREATSWORD = FW_ITEM_MANAGER.declareSword("weapon_dark_moon_greatsword");
+    public static final FWDeclaredItem WEAPON_ZWEIHANDER = FW_ITEM_MANAGER.declareSword("weapon_zweihander");
+    public static final FWDeclaredItem WEAPON_WATCHDOG_GREATSWORD = FW_ITEM_MANAGER.declareSword("weapon_watchdog_greatsword");
+    public static final FWDeclaredItem WEAPON_ROYAL_GREATSWORD = FW_ITEM_MANAGER.declareSword("weapon_royal_greatsword");
+    public static final FWDeclaredItem WEAPON_CRUCIBLE_GREATSWORD = FW_ITEM_MANAGER.declareSword("weapon_crucible_greatsword");
+    public static final FWDeclaredItem WEAPON_GENERIC_RAPIER = FW_ITEM_MANAGER.declareSword("weapon_generic_rapier");
+    public static final FWDeclaredItem WEAPON_KNIGHT_HALBERD = FW_ITEM_MANAGER.declareSword("weapon_knight_halberd");
+    public static final FWDeclaredItem WEAPON_DANCING_BLADE_OF_RANAH = FW_ITEM_MANAGER.declareSword("weapon_dancing_blade_of_ranah");
+
 
     private FWItems() {
     }

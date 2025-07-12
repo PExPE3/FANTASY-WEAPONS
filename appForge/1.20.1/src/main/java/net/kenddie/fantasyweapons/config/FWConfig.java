@@ -30,7 +30,7 @@ public class FWConfig {
     @Configuration
     public static class SwordConfig {
         public static final SwordConfig DEFAULT = new SwordConfig();
-        public float damage = 3;
+        public float damage = 9;
         public float speed = -2.4f;
     }
 }

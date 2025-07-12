@@ -67,6 +67,22 @@ public class FWCreativeModTabs {
                                 pOutput.accept(FWItems.WEAPON_MARIKA_HAMMER.get());
                                 pOutput.accept(FWItems.WEAPON_DESERT_WIND.get());
                                 pOutput.accept(FWItems.WEAPON_PHANTOM_NEEDLE.get());
+                                pOutput.accept(FWItems.WEAPON_ESTOC.get());
+                                pOutput.accept(FWItems.WEAPON_FOG_GUARD_DAGGER.get());
+                                pOutput.accept(FWItems.WEAPON_GREAT_KATANA.get());
+                                pOutput.accept(FWItems.WEAPON_SOLDIER_GREATSPEAR.get());
+                                pOutput.accept(FWItems.WEAPON_MISERICORDE.get());
+                                pOutput.accept(FWItems.WEAPON_KNIGHT_GREATSWORD.get());
+                                pOutput.accept(FWItems.WEAPON_BANISHED_KNIGHT_GREATSWORD.get());
+                                pOutput.accept(FWItems.WEAPON_DARK_MOON_GREATSWORD.get());
+                                pOutput.accept(FWItems.WEAPON_ZWEIHANDER.get());
+                                pOutput.accept(FWItems.WEAPON_WATCHDOG_GREATSWORD.get());
+                                pOutput.accept(FWItems.WEAPON_ROYAL_GREATSWORD.get());
+                                pOutput.accept(FWItems.WEAPON_CRUCIBLE_GREATSWORD.get());
+                                pOutput.accept(FWItems.WEAPON_GENERIC_RAPIER.get());
+                                pOutput.accept(FWItems.WEAPON_KNIGHT_HALBERD.get());
+                                pOutput.accept(FWItems.WEAPON_DANCING_BLADE_OF_RANAH.get());
+
                             })
                             .build()
             );

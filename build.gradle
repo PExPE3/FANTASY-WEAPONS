@@ -2,6 +2,5 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version 'latest.release' apply false
-    id 'org.parchmentmc.librarian.forgegradle' version 'latest.release' apply false
+
 }
